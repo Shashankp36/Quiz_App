@@ -22,12 +22,11 @@ STORE = [
     correctAnswer: "Both (a) and (b)"
     }
 ]
-/* sets initial values to zero for the question number and score */
 
 let qNumber = 0;
 let score = 0;
 
-/* event listener for start quiz button. Hides the start page and calls the function generateQuizQuestion */
+
 function startQuiz() {
     $('main').on('click', '#button-start', function(event){
         $('.start-quiz').hide();
@@ -35,7 +34,6 @@ function startQuiz() {
     });
 }
 
-/* begins displaying quiz questions from the STORE array until the very last question has been displayed, then calls the displayResults function */
 function generateQuizQuestion() {
     if (qNumber < STORE.length) {
     let question =$(`<form class ="js-quiz-form">
@@ -54,7 +52,6 @@ function generateQuizQuestion() {
 
 }
 
-/* event listener for the submit button. Then checks to see if an input is selected, and if the answer selected is correct */
 function questionChecker(){
     $('main').on('click','#button-submit', function (event){
         if ($('input:radio').is(':checked')) {
@@ -72,19 +69,16 @@ function questionChecker(){
     });
 }
 
-/* updates the question number and displays it at the top of the page */
 function questionNumber(){
     $('header').find('#question-number').text(qNumber+1);
 }
 
-/* keeps score of correct answers and displays at the top of the page */
 function scoreKeeper(){
     score++;
     $('header').find('#score').text(`${score}/5`);
 
 }
 
-/* displays the page for when the answer is right, updates score accordingly */
 function rightAnswer() {
     console.log('rightAnswer ran');
     $('.js-quiz-form').hide();
@@ -94,7 +88,6 @@ function rightAnswer() {
     scoreKeeper();
 }
 
-/* displays page for when the answer is wrong and displays the correct answer */
 function wrongAnswer() {
     $('.js-quiz-form').hide();
     $('.js-answer').append(`<h2>That answer is not quite right...</h2>
@@ -104,7 +97,7 @@ function wrongAnswer() {
         <button type="button" id ="button-next">Next</button>`).show();
 }
 
-/* event listener for the next question button, calls the generateQuizQuestion function to display the next question */
+
 function nextQuestion() {
     $('main').on('click','#button-next', function(event) {
         $('.js-answer').empty();
@@ -115,7 +108,7 @@ function nextQuestion() {
     });
 }
 
-/* displays the final percentage score and total number of correct answers */
+
 function displayResults(){
     console.log("`displayResults` ran");
     let finalScore = (score/5)*100;
@@ -146,5 +139,5 @@ function handleQuizApp(){
     restartQuiz();
 }
 
-/* calls the handleQuizApp to activate functions with event listeners */
+
 $(handleQuizApp);
