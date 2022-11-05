@@ -15,7 +15,7 @@ STORE = [
     },
     { question: "How to display preformatted text in HTML?",
     answer: ["&lt;p&gt;", "&lt;pre&gt;", "&lt;a&gt;", "All of the above"],
-    correctAnswer: "<p>"
+    correctAnswer: "&lt;p&gt;"
     },
     { question: "Which of the following tags doesnt require a closing tag?",
     answer: ["br", "hr", "Both (a) and (b)", "none"],
