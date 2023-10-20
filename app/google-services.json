@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105601804461",
+    "project_id": "quizey-dcc79",
+    "storage_bucket": "quizey-dcc79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105601804461:android:5cc060704b850cf182fe24",
+        "android_client_info": {
+          "package_name": "com.example.quizey"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105601804461-bthlnp4b9lmvtidbu2kq6kghsrnl6g24.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs1xbNKEeV_RbIqH0XNUT0On9XSn0BGBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105601804461-bthlnp4b9lmvtidbu2kq6kghsrnl6g24.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
